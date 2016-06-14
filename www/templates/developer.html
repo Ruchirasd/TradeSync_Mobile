@@ -1,0 +1,90 @@
+<!-- This html page is for developing purposes for unit testing
+This will test units of the mobile application functions which are need for several functionality of the system-->
+
+<ion-view title="Developer" id="page5">
+    <ion-content padding="true" class="has-header">
+
+
+      <!-- This is test the signup process of the mobile app. -->
+        <div class="list card">
+            <div class="item item-divider">Sign Up Test</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label" >Name</span>
+                        <input type="text" placeholder=""ng-model="name">
+                    </label>
+                    <button id="developer-button1" class="button button-positive  button-block" ng-click="signup(name)">Sign Up</button>
+                </form>
+            </div>
+        </div>
+
+      <!-- This is test the subscription process of stocks -->
+        <div class="list card">
+            <div class="item item-divider">Subscribe Test</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label" >User ID</span>
+                        <input type="text" placeholder="" ng-model="uid1">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Exchange Code</span>
+                        <input type="text" placeholder="" ng-model="exchange1">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Stock Code</span>
+                        <input type="text" placeholder="" ng-model="stock1">
+                    </label>
+                    <button id="developer-button2" class="button button-positive  button-block" ng-click="subscribe(uid1,exchange1,stock1)">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+      <!-- This is test the unsubscribe process of stocks -->
+        <div class="list card">
+            <div class="item item-divider">Unsubscribe Test</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label">User ID</span>
+                        <input type="text" placeholder="" ng-model="uid2">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Exchange Codeu</span>
+                        <input type="text" placeholder="" ng-model="exchage2">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Stock Code</span>
+                        <input type="text" placeholder="" ng-model="stock2">
+                    </label>
+                    <button id="developer-button3" class="button button-positive  button-block" ng-click="unsubscribe(uid2,exchage2,stock2)">Unsubscribe</button>
+                </form>
+            </div>
+        </div>
+
+      <!-- This is get the list of stocks for a given exchange -->
+        <div class="list card">
+            <div class="item item-divider">Stock List</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Exchange</span>
+                        <input type="text" placeholder="" ng-model="code">
+                    </label>
+                    <button id="developer-button4" class="button button-positive  button-block" ng-click="getStockList(code)">Query</button>
+                </form>
+            </div>
+        </div>
+
+      <!-- This is get the list of exchanges -->
+        <div class="list card">
+            <div class="item item-divider">Exchange List</div>
+            <div class="item item-body">
+                <form class="list">
+                    <button id="developer-button5" class="button button-positive  button-block" ng-click="getExchangeList()">Query1</button>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
