@@ -16,6 +16,10 @@ angular.module('app.routes', ['ionicUIRouter'])
           }
         }
       })
+      .state('app', {
+        abstract: true,
+        templateUrl: "index.html"
+      })
 
       .state('tabsController.myAccount', {
         url: '/page3',
@@ -65,12 +69,12 @@ angular.module('app.routes', ['ionicUIRouter'])
         controller: 'signupCtrl'
       })
 
-       .state('addStock', {
-       url: '/page8',
-       templateUrl: 'templates/addStock.html',
-       controller: 'addStockCtrl'
-       })
+      .state('app.loading', {
+      url: '/page9',
+      templateUrl: 'templates/loading.html',
+      controller: 'loadingCtrl'
+    })
 
-    $urlRouterProvider.otherwise('/page1/page2');
+    $urlRouterProvider.otherwise('/page6');
 
   });
