@@ -1,31 +1,17 @@
 <ion-view title="My Stocks" id="page2">
-    <ion-content padding="true" class="has-header">
-      <a  class="icon ion-plus-round" href="#page1/page2"  ></a>
+  <ion-content padding="true" class="has-header">
+    <button  class="icon ion-plus-round" ng-click="addStock()"  ></button>
 
-
-      <div class="list card">
-        <div class="item item-divider">Subscribe</div>
-        <div class="item item-body">
-          <form class="list">
-
-            <label class="item item-input">
-              <span class="input-label">Exchange</span>
-              <!--<input type="text" placeholder="" ng-model="exchange1">-->
-              <select class="ion-input-select">
-                <option selected>--Select--</option>
-                <option>CSE</option>
-                <option>LME</option>
-              </select>
-            </label>
-            <label class="item item-input">
-              <span class="input-label">Stock Code</span>
-              <input type="text" placeholder="" ng-model="stock1">
-            </label>
-            <button id="developer-button2" class="button button-positive  button-block" ng-click="subscribe(uid1,exchange1,stock1)">Subscribe</button>
-          </form>
-        </div>
-      </div>
-
-
-    </ion-content>
+    <div class="list card " id="cameraTabDefaultPage-card23">
+      <ion-item class="item-dark" id="cameraTabDefaultPage-list-item13">
+        <i class="icon ion-android-data"></i> StockCode
+      </ion-item>
+      <ion-item class="item-icon-left  " id="cameraTabDefaultPage-list-item15">
+        <i class="icon ion-stats-bars"></i>Exchange</ion-item>
+      <ion-item class="item-icon-left  " id="cameraTabDefaultPage-list-item16">
+        <i class="icon ion-pie-graph"></i>Name</ion-item>
+      <ion-item class="item-icon-left assertive  " id="cameraTabDefaultPage-list-item14">
+        <i class="icon ion-trash-a"></i>Unsubscribe</ion-item>
+    </div>
+  </ion-content>
 </ion-view>

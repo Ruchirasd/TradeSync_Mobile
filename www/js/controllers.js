@@ -1,17 +1,31 @@
 angular.module('app.controllers', ['ui.router'])
 
-  .controller('myStocksCtrl', function ($scope,$state) {
+  .controller('myStocksCtrl', function ($scope,$state,$ionicModal,sessionService) {
+    
+    sessionService.persist("mystocks",[{code:"MBSL",price:"2.5"}]);
+    sessionService.persist("exchanges",[{code:"CSE",name:"CSE"},{lme:"LME",name:"LME"}]);
 
-    //this function is triggered when new user is add a stock in the system
-    /*$scope.addStock = function (name) {
-      $state.go("/page8");
-    }*/
+    $scope.exchangeObjs = sessionService.get("exchanges");
 
-    $scope.create = function($state) {
+    // Initialize the dialog window
+    $ionicModal.fromTemplateUrl('templates/addStock.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+
+    $scope.addStock = function($state) {
       alert("working");
-      $state.go('app.tabsController.developer');
-    };
+      var newStock = {
+        title: '',
+        description: '',
+        isComplete: null
+      };
 
+      $scope.newStock = newStock;
+      $scope.modal.show();
+    };
   })
 
   .controller('myAccountCtrl', function ($scope) {

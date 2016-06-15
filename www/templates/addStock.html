@@ -7,7 +7,9 @@
 
           <label class="item item-input">
             <span class="input-label">Exchange</span>
-            <input type="text" placeholder="" ng-model="exchange1">
+            <select ng-model="exchange1" ng-options="item.code as item.name for item in exchangeObjs">
+              <option value="">Select Account</option>
+            </select>
           </label>
           <label class="item item-input">
             <span class="input-label">Stock Code</span>
