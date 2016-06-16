@@ -1,17 +1,18 @@
-<ion-view title="My Stocks" id="page2">
+<ion-view cache-view="false" title="My Stocks" id="page2">
   <ion-content padding="true" class="has-header">
-    <button  class="icon ion-plus-round" ng-click="addStock()"  ></button>
+    <ion-item  class="icon ion-plus-round" ng-click="addStock()"  ></ion-item>
 
-    <div class="list card " id="cameraTabDefaultPage-card23">
+    <div class="list card " id="cameraTabDefaultPage-card23" ng-repeat="item in myStocks">
       <ion-item class="item-dark" id="cameraTabDefaultPage-list-item13">
-        <i class="icon ion-android-data"></i> StockCode
+        <i class="icon ion-android-data"></i> {{ item.stockCode }}
       </ion-item>
       <ion-item class="item-icon-left  " id="cameraTabDefaultPage-list-item15">
-        <i class="icon ion-stats-bars"></i>Exchange</ion-item>
+        <i class="icon ion-stats-bars"></i>{{ item.code }} </ion-item>
       <ion-item class="item-icon-left  " id="cameraTabDefaultPage-list-item16">
-        <i class="icon ion-pie-graph"></i>Name</ion-item>
-      <ion-item class="item-icon-left assertive  " id="cameraTabDefaultPage-list-item14">
+        <i class="icon ion-pie-graph"></i>{{ item.name }}</ion-item>
+      <ion-item ng-click="unsubscribe(item.code, item.stockCode)" class="button-assertive item-icon-left assertive  " id="cameraTabDefaultPage-list-item14">
         <i class="icon ion-trash-a"></i>Unsubscribe</ion-item>
     </div>
+
   </ion-content>
 </ion-view>

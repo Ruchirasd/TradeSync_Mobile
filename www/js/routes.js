@@ -22,21 +22,21 @@ angular.module('app.routes', ['ionicUIRouter'])
       })
 
       .state('tabsController.myAccount', {
-        url: '/page3',
-        views: {
-          'tab2': {
-            templateUrl: 'templates/myAccount.html',
-            controller: 'myAccountCtrl'
-          }
-        }
-      })
-
-      .state('tabsController.statistics', {
         url: '/page4',
         views: {
           'tab3': {
             templateUrl: 'templates/statistics.html',
             controller: 'statisticsCtrl'
+          }
+        }
+      })
+
+      .state('tabsController.statistics', {
+        url: '/page3',
+        views: {
+          'tab2': {
+            templateUrl: 'templates/myAccount.html',
+            controller: 'myAccountCtrl'
           }
         }
       })

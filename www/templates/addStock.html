@@ -7,14 +7,14 @@
 
           <label class="item item-input">
             <span class="input-label">Exchange</span>
-            <select ng-model="exchange1" ng-value="" ng-options="item.code as item.code for item in exchangeObjs track by item.id" ng-change="getStockList(exchange1)">
-              <option value="">Select Account</option>
+            <select ng-model="exchange1"  ng-options="item.code as item.code for item in exchangeObjs track by item.id" ng-change="getStockList(exchange1)">
+              <option value="">Select Exchange</option>
             </select>
           </label>
-            <label class="item item-input">
+          <label class="item item-input">
             <span class="input-label">Stock Code</span>
             <select ng-model="stock1" ng-options="item.stock_code as item.stock_code for item in stockObjs track by item.id">
-              <option value="">Select Account</option>
+              <option value="">Select Stock</option>
             </select>
 
           </label>

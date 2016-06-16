@@ -1,3 +1,32 @@
-<ion-view title="Statistics" id="page4">
-    <ion-content padding="true" class="has-header"></ion-content>
+<ion-view cache-view="false" title="Statistics" id="page4">
+  <ion-content padding="true" class="has-header">
+
+    <nvd3 options="options" data="data"></nvd3>
+
+    <div class="row header">
+      <div class="col">Exchange</div>
+      <div class="col">Stock Code</div>
+      <div class="col">Last Price</div>
+    </div>
+    <div class="row" ng-repeat="item in myStocks">
+      <div class="col">{{item.code }}</div>
+      <div class="col">{{item.stockCode}}</div>
+      <div class="col">LK {{item.lastPrice}}</div>
+    </div>
+<!--
+    <table>
+      <tr ng-repeat="item in myStocks">
+        <td>
+          {{ item.stockCode }}
+        </td>
+        <td>
+          {{ item.code }}
+        </td>
+        <td>
+          {{ item.lastPrice }}
+        </td>
+      </tr>
+    </table>-->
+
+  </ion-content>
 </ion-view>
